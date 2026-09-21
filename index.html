@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EBMARKETIZA | Online Shopping</title>
+
+    <meta
+        name="description"
+        content="EBMARKETIZA - Shop clothes, shoes, electronics, home products and more."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+    <div class="top-bar">
+        <p>Welcome to EBMAR­KETIZA</p>
+
+        <div class="top-actions">
+            <select id="languageSelector" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sv">Svenska</option>
+                <option value="rw">Kinyarwanda</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+
+            <select id="currencySelector" aria-label="Currency">
+                <option value="SEK">SEK kr</option>
+                <option value="EUR">EUR €</option>
+                <option value="USD">USD $</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">EBMARKETIZA</a>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+
+            <button id="searchButton" type="button">
+                🔍
+            </button>
+
+            <div id="searchSuggestions" class="search-suggestions"></div>
+        </div>
+
+        <!-- ACCOUNT ACTIONS -->
+        <div class="header-actions">
+
+            <a href="account.html" class="header-action">
+                <span>👤</span>
+                <small>Account</small>
+            </a>
+
+            <a href="favorites.html" class="header-action">
+                <span>❤️</span>
+                <small>Favorite</small>
+            </a>
+
+            <a href="cart.html" class="header-action cart-action">
+                <span>🛒</span>
+                <small>Cart</small>
+                <b id="cartCount">0</b>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <nav class="main-nav">
+
+        <button class="category-button" id="categoryButton">
+            ☰ Categories
+        </button>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">All Products</a>
+            <a href="new-arrivals.html">New Arrivals</a>
+            <a href="favorites.html">Favorite</a>
+            <a href="orders.html">My Orders</a>
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         CATEGORY MENU
+    ========================== -->
+    <div class="category-menu" id="categoryMenu">
+
+        <div class="category-item">
+            <a href="products.html?category=clothing">
+                👕 Clothing
+            </a>
+        </div>
+
+        <div class="category-item">
+            <a href="products.html?category=shoes">
+                👟 Shoes
+            </a>
+        </div>
+
+        <div class="category-item">
+            <a href="products.html?category=electronics">
+                📱 Electronics
+            </a>
+        </div>
+
+        <div class="category-item">
+            <a href="products.html?category=home">
+                🏠 Home
+            </a>
+        </div>
+
+        <div class="category-item">
+            <a href="products.html?category=beauty">
+                💄 Beauty
+            </a>
+        </div>
+
+        <div class="category-item">
+            <a href="products.html?category=accessories">
+                👜 Accessories
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main>
+
+        <!-- =========================
+             WELCOME SECTION
+        ========================== -->
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+                    Welcome to EBMAR­KETIZA
+                </span>
+
+                <h1>
+                    Shop what you love.
+                </h1>
+
+                <p>
+                    Discover clothes, shoes, electronics, home products,
+                    beauty products and more.
+                </p>
+
+                <a href="products.html" class="primary-button">
+                    Shop Now
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CATEGORIES
+        ========================== -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+            </div>
+
+            <div class="categories-grid">
+
+                <a href="products.html?category=clothing"
+                   class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>Clothing</h3>
+                </a>
+
+                <a href="products.html?category=shoes"
+                   class="category-card">
+                    <div class="category-icon">👟</div>
+                    <h3>Shoes</h3>
+                </a>
+
+                <a href="products.html?category=electronics"
+                   class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Electronics</h3>
+                </a>
+
+                <a href="products.html?category=home"
+                   class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h3>Home</h3>
+                </a>
+
+                <a href="products.html?category=beauty"
+                   class="category-card">
+                    <div class="category-icon">💄</div>
+                    <h3>Beauty</h3>
+                </a>
+
+                <a href="products.html?category=accessories"
+                   class="category-card">
+                    <div class="category-icon">👜</div>
+                    <h3>Accessories</h3>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEW ARRIVALS
+        ========================== -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>New Arrivals</h2>
+
+                <a href="new-arrivals.html">
+                    View All →
+                </a>
+            </div>
+
+            <div
+                id="newArrivalsGrid"
+                class="products-grid"
+            >
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Products</h2>
+
+                <a href="products.html">
+                    View All →
+                </a>
+            </div>
+
+            <div
+                id="productsGrid"
+                class="products-grid"
+            >
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h3>EBMARKETIZA</h3>
+
+                <p>
+                    Your online shopping destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Shopping</h4>
+
+                <a href="products.html">
+                    All Products
+                </a>
+
+                <a href="new-arrivals.html">
+                    New Arrivals
+                </a>
+
+                <a href="favorites.html">
+                    Favorite
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Account</h4>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Payment</h4>
+
+                <p>💳 Visa / Mastercard</p>
+                <p>🇸🇪 Swish</p>
+                <p>🅿️ PayPal</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 EBMARKETIZA. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>
