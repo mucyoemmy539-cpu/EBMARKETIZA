@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Checkout | EBMARKETIZA</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="topbar"><strong>EBMARKETIZA</strong><select id="currencySelect"><option value="SEK">SEK</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div>
+<header class="header"><a class="logo" href="index.html">EBMARKETIZA</a><a href="cart.html">← Cart</a></header>
+<main class="section checkout-grid">
+<form id="checkoutForm" class="panel"><h1>Checkout</h1>
+<label>Full name<input required id="customerName" placeholder="Your name"></label>
+<label>Phone number<input required id="phone" placeholder="+46..."></label>
+<label>Delivery address<textarea required id="address" placeholder="Street, postal code, city"></textarea></label>
+<h2>Payment method</h2>
+<label class="payment-option"><input type="radio" name="payment" value="card" checked> 💳 Visa / Mastercard</label>
+<label class="payment-option"><input type="radio" name="payment" value="swish"> 🟢 Swish</label>
+<label class="payment-option"><input type="radio" name="payment" value="paypal"> 🔵 PayPal</label>
+<div id="paymentFields"></div>
+<button class="primary-btn" type="submit">Pay Now</button>
+<p class="demo-note">Version 2 demo: no real payment is processed.</p>
+</form>
+<aside id="checkoutSummary" class="panel"></aside>
+</main>
+<script src="products.js"></script><script src="app.js"></script><script src="checkout.js"></script>
+</body></html>

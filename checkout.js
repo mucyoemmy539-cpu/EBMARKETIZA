@@ -1,0 +1,4 @@
+const summary=document.getElementById("checkoutSummary"),form=document.getElementById("checkoutForm");
+function renderSummary(){summary.innerHTML=`<h2>Order Summary</h2>${cart.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);return `<p>${p.name} × ${i.qty}<b>${money(p.price*i.qty)}</b></p>`}).join("")}<hr><p>Subtotal <b>${money(subtotal())}</b></p><p>Delivery <b>${deliveryFee()?money(deliveryFee()):"Free"}</b></p><hr><h2>Total <b>${money(subtotal()+deliveryFee())}</b></h2>`}
+if(!cart.length){form.innerHTML='<h1>Your cart is empty</h1><a class="primary-btn inline" href="index.html">Shop Now</a>'}else renderSummary();
+form?.addEventListener("submit",e=>{e.preventDefault();const method=new FormData(form).get("payment");alert(`Demo payment selected: ${method}. No real payment was processed.`);localStorage.removeItem("eb_cart");location.href="index.html"});

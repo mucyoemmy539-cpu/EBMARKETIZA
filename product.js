@@ -1,0 +1,7 @@
+const params=new URLSearchParams(location.search),id=Number(params.get("id")),p=PRODUCTS.find(x=>x.id===id),box=document.getElementById("productDetail");
+if(!p){box.innerHTML="<h1>Product not found</h1>"}else{
+let color=p.colors?.[0]||"",size=p.sizes?.[0]||"";
+box.innerHTML=`<div class="product-page"><div class="product-gallery"><img src="${p.image}" alt="${p.name}"></div><div class="product-content"><div class="product-category">${p.category}</div><h1>${p.name}</h1><div class="rating">⭐ ${p.rating}</div><div class="price-row"><span class="big-price">${money(p.price)}</span>${p.oldPrice?`<span class="old-price">${money(p.oldPrice)}</span>`:""}</div>${p.stock<=5?`<div class="stock">Only ${p.stock} left</div>`:""}<p class="description">${p.description}</p><label>Color<select id="color">${p.colors.map(x=>`<option>${x}</option>`).join("")}</select></label><label>Size<select id="size">${p.sizes.map(x=>`<option>${x}</option>`).join("")}</select></label><div class="product-actions"><button id="fav" class="secondary-btn">❤️ Favorite</button><button id="add" class="primary-btn">🛒 Add to Cart</button></div></div></div>`;
+document.getElementById("fav").onclick=()=>toggleFavorite(p.id);
+document.getElementById("add").onclick=()=>{addCart(p.id,1,{color:document.getElementById("color").value,size:document.getElementById("size").value});location.href="cart.html"};
+}
